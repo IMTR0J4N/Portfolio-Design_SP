@@ -228,3 +228,8 @@ main {
     border: none;
     border-radius: 50%;
 }
+
+.pic {
+    height: auto;
+    width: 90vw;
+}

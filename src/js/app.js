@@ -2,23 +2,25 @@ const carousselImg = document.getElementById('caroussel-img');
 const backBtn = document.getElementById('back');
 const nextBtn = document.getElementById('next');
 
-
-const imagesSrc = ['src/assets/image-slide-1.jpg', 'src/assets/image-slide-2.jpg', 'src/assets/image-slide-3.jpg', 'src/assets/image-slide-4.jpg', 'src/assets/image-slide-5.jpg'];
-
-let i = 0;
+let imgSrc = "src/assets/image-slide-"
+let i = 1;
 
 nextBtn.onclick = () => {
-    i = checkIndex
-    carousselImg.src = imagesSrc[1];
+    i++
+
+    if (i > 5) {
+        i = 0;
+    } else {
+        carousselImg.src = `${imgSrc}${i}.jpg`;
+    }
 }
 
+backBtn.onclick = () => {
+    i--
 
-const checkIndex = () => {
-    if (i = 0) {
-        return imagesSrc.length
-    } else if (i === imagesSrc.length) {
-        return 0
+    if (i < 0) {
+        i = 5;
     } else {
-        return i++
+        carousselImg.src = `${imgSrc}${i}.jpg`;
     }
 }
