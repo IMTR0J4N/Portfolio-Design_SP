@@ -18,8 +18,9 @@ nextBtn.onclick = () => {
 backBtn.onclick = () => {
     i--
 
-    if (i < 0) {
+    if (i < 1) {
         i = 5;
+        carousselImg.src = `${imgSrc}${i}.jpg`;
     } else {
         carousselImg.src = `${imgSrc}${i}.jpg`;
     }

@@ -12,6 +12,7 @@
     --sys-white: #fff7f0;
 
     font-family: "Plus Jakarta Sans";
+    color: var(--sys-white);
 }
 
 body {
@@ -35,14 +36,63 @@ body {
     top: 16px;
 }
 
-#black_a1 {
+.black_a1 {
     position: absolute;
     right: 16px;
     top: 18px;
     width: 176px;
     height: 44px;
+    background-color: var(--sys-black);
+    border-radius: 28px;
+}
+
+.black_a1:hover {
+    background-color: var(--sys-blue);
+}
+
+.black2_a1 {
+    position: absolute;
+    right: 5%;
+    bottom: 15%;
+    width: 176px;
+    height: 44px;
     background: var(--sys-black);
     border-radius: 28px;
+}
+
+.black2_a1:hover {
+    background-color: var(--sys-blue);
+}
+
+.salmon_a1 {
+    position: absolute;
+    right: 90px;
+    text-align: center;
+    color: var(--sys-white);
+    width: 176px;
+    height: 44px;
+    background: var(--sys-salmon);
+    border-radius: 28px;
+    text-decoration: none;
+
+}
+
+.salmon2_a1 {
+    position: absolute;
+    right: 90px;
+    text-align: center;
+    color: var(--sys-white);
+    top: 2550px;
+    width: 176px;
+    height: 44px;
+    background: var(--sys-salmon);
+    border-radius: 28px;
+    text-decoration: none;
+
+}
+
+.salmon_a1:hover, .salmon2_a1:hover {
+    background-color: var(--sys-orange);
 }
 
 .white_span_a1 {
@@ -185,11 +235,12 @@ main {
 #presentation-photo {
     margin-left: 20px;
     height: 300px;
-    width: 300px;
+    width: auto;
 }
 
 .presentation-text {
     text-align: center;
+    color: var(--sys-black);
 }
 
 .paragraph-text {
@@ -207,20 +258,24 @@ main {
 }
 
 #back {
+    position: relative;
     height: 64px;
     width: 64px;
+    left: 29%;
     background-repeat: no-repeat;
     background-color: var(--sys-black);
     background-image: url("../assets/icon-arrow-left.svg");
     background-position: center;
     border: none;
     border-radius: 50%;
-    
+
 }
 
 #next {
+    position: relative;
     height: 64px;
     width: 64px;
+    left: 33%;
     background-repeat: no-repeat;
     background-color: var(--sys-black);
     background-image: url("../assets/icon-arrow-right.svg");
@@ -229,7 +284,123 @@ main {
     border-radius: 50%;
 }
 
+#back:hover, #next:hover {
+    background-color: var(--sys-blue);
+}
+
 .pic {
     height: auto;
     width: 90vw;
+}
+
+.book-call {
+    margin-top: 1100px;
+    border-radius: 5px;
+    height: 352px;
+    width: 342px;
+    background-color: var(--sys-black);
+
+}
+
+.book-call-h2 {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 55px;
+}
+
+.book-call-p {
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 120px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer {
+    position: absolute;
+    left: 0%;
+    top: 335%;
+    height: 96px;
+    width: 100%;
+}
+
+#bottom-logo {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 16px;
+    bottom: 16px;
+}
+
+@media (min-width: 770px) {
+    .cards-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+        height: 600px;
+    }
+
+    #graph-design_card {
+        grid-area: 1 / 1 / 3 / 3;
+    }
+
+    #ui-ux_card {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    #apps_card {
+        grid-area: 1 / 4 / 2 / 5;
+    }
+
+    #illustrations_card {
+        grid-area: 2 / 3 / 3 / 5;
+    }
+
+    #photo_card {
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    #motion-graphics_card {
+        grid-area: 3 / 3 / 4 / 5;
+    }
+
+    .presentation-wrapper {
+        top: 700px;
+    }
+
+    #presentation-photo {
+        height: 364px;
+        margin-left: -50px;
+    }
+    
+    .presentation-text {
+        position: absolute;
+        text-align: left;
+        top: 0%;
+        margin-right: 15%;
+        margin-left: 51%;
+    }
+
+    .paragraph-text {
+        position: absolute;
+        text-align: left;
+        top: 20%;
+        margin-left: 51%;
+        margin-right: 10%;
+    }
+
+    .salmon_a1 {
+        margin-top: 300px;
+        margin-right: 100px;
+    }
+
+    .book-call {
+        width: 100%;
+    }
+
+    .book-call-h2 {
+        ;
+    }
 }
